@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  drawer:
+    build: /
+    ports:
+      - 8080:80
+    volumes:
+      - ./Drawer:/var/www/html
+  
+  sorter:
+    build: /
+    ports:
+      - 8081:80
+    volumes:
+      - ./sorter:/var/www/html
+
+  info:
+    build: /
+    ports:
+      - 8082:80
+    volumes:
+      - ./info:/var/www/html
